@@ -1,1 +1,4 @@
-# EEPROM_operation
+# EEPROM Operation
+
+## Support 
+  24C01, 24C02, 24C04, 24C08, 24C16, 24C32, 24C64, 24C128, 24C256, 24C512
