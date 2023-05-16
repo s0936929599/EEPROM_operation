@@ -6,24 +6,24 @@
 
 ### Read
   * python3 eeprom.py 1 0x50 24C02 -r -o 0x00
-  * 
+  
 ### Read block
   * python3 eeprom.py 1 0x55 24C02 -rb -o 0x00 -rbs 5
-  * 
+  
 ### Write
   * python3 eeprom.py 1 0x55 24C02 -w -o 0x00 -d 0x10
-  * 
+  
 ### Write block
   * python3 eeprom.py 1 0x55 24C02 -wb -o 0x00 -dl 0x10 0x20 0x30 0x40 0x50
-  * 
+  
 ### Dump
   * python3 eeprom.py 1 0x55 24C02 -edc
   * python3 eeprom.py 1 0x55 24C02 -edc -eds 128 (specify size to dump)
-  * 
+  
 ### clear
   * python3 eeprom.py 1 0x55 24C02 -ec
   * python3 eeprom.py 1 0x55 24C02 -ec -ecs 128 (specify size to clear)
-  * 
+  
 ### Write binary content to EEPROM
   * python3 eeprom.py 1 0x55 24C02 -ewb file.bin
 
