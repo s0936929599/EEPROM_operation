@@ -13,7 +13,7 @@ class EEPROM:
     DUMP_SIZE = 256
     CLEAN_SIZE = 256
     CHUNK_SIZE = 8              # fru data length is always in multiples of 8 bytes
-    WRITE_DELAY_SEC = 0.015     # data sheet says 10 ms max
+    WRITE_DELAY_SEC = 0.015     # data sheet says 5 ms max
     BIN_FILENAME = "eeprom.bin"
     CHIP_NAME = "24C128"
     
@@ -187,13 +187,7 @@ if __name__ == '__main__':
 
     def auto_int(x):
         return int(x, 0)
-
-    parser.add_argument('chip',
-                        type=str,
-                        nargs='?',
-                        default= "24C128",
-                        help='EEPROM chip type, default chip type 24C128')
-        
+    
     parser.add_argument('bus',
                         type=int,
                         default=0,
@@ -205,6 +199,12 @@ if __name__ == '__main__':
                         default=0x51,
                         nargs='?',
                         help='EEPROM address, default address 0x51')
+    
+    parser.add_argument('chip',
+                        type=str,
+                        nargs='?',
+                        default= "24C128",
+                        help='EEPROM chip type, default chip type 24C128')
     
     parser.add_argument('-edc', '--eeprom-dump-console',
                         action='store_true',
